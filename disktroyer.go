@@ -76,7 +76,7 @@ func testFiles(dir string) error {
 	mrand.Seed(int64(time.Now().Nanosecond()))
 
 	// create source files
-	printf("%v: creating %v files", dir, maxFiles)
+	printf("%v: creating %v files", dir, *maxFiles)
 	for files := 0; files < *maxFiles; files++ {
 		filename := filepath.Join(srcD, strconv.Itoa(files))
 		f, err := os.OpenFile(filename,
